@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restaurant Lead Pipeline Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#101820; --card:#1c2836; --text:#eef4fb; --muted:#97a8be; --accent:#46c2b0; --line:rgba(255,255,255,.1); }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:"DM Sans",system-ui,sans-serif; background:radial-gradient(800px 400px at 0% 0%, rgba(70,194,176,.18), transparent), var(--bg); color:var(--text); }
+    .wrap { max-width:1100px; margin:0 auto; padding:28px 16px 60px; }
+    a.back { color:var(--accent); text-decoration:none; font-weight:600; }
+    h1 { margin:12px 0 6px; font-size:clamp(1.6rem,3vw,2.2rem); }
+    .sub { color:var(--muted); margin:0 0 22px; }
+    .panel { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px; margin-bottom:18px; }
+    label { display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+    select, button { font:inherit; }
+    select { width:100%; max-width:320px; padding:10px 12px; border-radius:10px; border:1px solid var(--line); background:#121a24; color:var(--text); }
+    .row { display:flex; gap:12px; flex-wrap:wrap; align-items:end; }
+    button {
+      border:0; border-radius:10px; padding:11px 16px; font-weight:700; cursor:pointer;
+      background:linear-gradient(90deg,#46c2b0,#2f9e90); color:#06221e;
+    }
+    button.secondary { background:transparent; color:var(--text); border:1px solid var(--line); }
+    .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin-top:14px; }
+    .stat { background:#121a24; border-radius:10px; padding:12px; border:1px solid var(--line); }
+    .stat b { display:block; font-size:1.3rem; }
+    .stat span { color:var(--muted); font-size:12px; }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th, td { text-align:left; padding:10px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+    th { color:var(--muted); font-weight:600; font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+    .badge { display:inline-block; padding:2px 8px; border-radius:999px; background:rgba(70,194,176,.15); color:#7ee0d1; font-size:12px; }
+    .empty { color:var(--muted); padding:20px 0; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="../../">← All demos</a>
+    <h1>Pakistan Restaurant Lead Pipeline</h1>
+    <p class="sub">Interactive browser demo of the Week 3 internship tool by Hammad Durrani. Generates sample leads instantly (same demo mode as the Flask app).</p>
+
+    <div class="panel">
+      <div class="row">
+        <div>
+          <label for="city">City</label>
+          <select id="city"></select>
+        </div>
+        <div>
+          <label for="count">Leads per run</label>
+          <select id="count">
+            <option value="10">10</option>
+            <option value="20" selected>20</option>
+            <option value="30">30</option>
+          </select>
+        </div>
+        <button id="run">Generate leads</button>
+        <button class="secondary" id="csv" disabled>Download CSV</button>
+      </div>
+      <div class="stats" id="stats"></div>
+    </div>
+
+    <div class="panel">
+      <div id="tableWrap" class="empty">Choose a city and click Generate leads.</div>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

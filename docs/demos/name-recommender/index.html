@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Business Name Recommender Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="../../">← All demos</a>
+    <header>
+      <h1>AI Business Name Recommender</h1>
+      <p>Browser demo of the Week 4 internship tool by Hammad Durrani. Generates brandable SME consultancy names from your keywords.</p>
+    </header>
+
+    <main class="card">
+      <label for="keywords">Keywords (comma-separated)</label>
+      <input id="keywords" type="text" value="growth, trust, advisory, launch, ledger" />
+
+      <div class="grid">
+        <div>
+          <label for="count">Candidates</label>
+          <input id="count" type="number" min="20" max="300" value="80" />
+        </div>
+        <div>
+          <label for="top">Top results</label>
+          <input id="top" type="number" min="5" max="40" value="12" />
+        </div>
+        <div>
+          <label for="minLen">Min length</label>
+          <input id="minLen" type="number" min="4" max="12" value="5" />
+        </div>
+        <div>
+          <label for="maxLen">Max length</label>
+          <input id="maxLen" type="number" min="6" max="18" value="12" />
+        </div>
+      </div>
+
+      <button id="generate">Generate names</button>
+      <div id="results" class="results"></div>
+    </main>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

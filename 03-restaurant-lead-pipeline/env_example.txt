@@ -1,0 +1,15 @@
+# API Keys for Restaurant Lead Generation Pipeline
+# Copy this file to .env and fill in your actual API keys
+
+# Google Maps API Key (Required for Google Places API)
+# Get from: https://developers.google.com/maps/documentation/places/web-service/get-api-key
+GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
+
+# Facebook Access Token (Optional for Facebook Pages scraping)
+# Get from: https://developers.facebook.com/tools/explorer/
+FACEBOOK_ACCESS_TOKEN=your_facebook_access_token_here
+
+# Optional: Customize search parameters
+# MAX_RESTAURANTS_PER_CITY=100
+# DELAY_BETWEEN_REQUESTS=2
+# TIMEOUT=30 

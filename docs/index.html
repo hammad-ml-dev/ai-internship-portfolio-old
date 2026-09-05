@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Internship Portfolio — Live Demos | Hammad Durrani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f1419;
+      --panel: #1a2332;
+      --text: #e8eef7;
+      --muted: #93a4bd;
+      --accent: #3dd6c6;
+      --accent2: #f0a05a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "DM Sans", system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(900px 500px at 10% -10%, rgba(61, 214, 198, 0.18), transparent),
+        radial-gradient(700px 400px at 90% 0%, rgba(240, 160, 90, 0.14), transparent),
+        var(--bg);
+    }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 48px 20px 80px; }
+    .brand {
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      margin: 0 0 8px;
+      letter-spacing: -0.02em;
+    }
+    .lead { color: var(--muted); max-width: 54ch; line-height: 1.55; margin: 0 0 36px; }
+    .grid { display: grid; gap: 18px; }
+    @media (min-width: 720px) { .grid { grid-template-columns: 1fr 1fr; } }
+    a.card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 24px;
+      transition: transform .15s ease, border-color .15s ease;
+    }
+    a.card:hover { transform: translateY(-3px); border-color: rgba(61, 214, 198, 0.45); }
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--bg);
+      background: var(--accent);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    a.card:nth-child(2) .tag { background: var(--accent2); }
+    h2 { margin: 0 0 8px; font-size: 1.35rem; }
+    p { margin: 0; color: var(--muted); line-height: 1.5; }
+    .cta { margin-top: 14px; color: var(--accent); font-weight: 700; }
+    a.card:nth-child(2) .cta { color: var(--accent2); }
+    footer { margin-top: 40px; color: var(--muted); font-size: 14px; }
+    footer a { color: var(--accent); }
+    .meta {
+      display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 28px;
+    }
+    .chip {
+      font-size: 12px; font-weight: 600; color: var(--text);
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.04);
+      padding: 6px 12px; border-radius: 999px;
+    }
+    .section-title {
+      margin: 36px 0 12px; font-size: 0.95rem; letter-spacing: .04em;
+      text-transform: uppercase; color: var(--muted); font-weight: 700;
+    }
+    .path {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px; padding: 16px 18px; color: var(--muted); line-height: 1.55;
+    }
+    .path ol { margin: 8px 0 0; padding-left: 18px; }
+    .path a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1 class="brand">AI Internship Portfolio</h1>
+    <p class="lead">
+      Live visual demos from Hammad Durrani’s internship projects.
+      Open a tool below to try it in your browser.
+    </p>
+    <div class="meta">
+      <span class="chip">4 internship weeks</span>
+      <span class="chip">Pakistan SME focus</span>
+      <span class="chip">Free to explore</span>
+    </div>
+    <div class="grid">
+      <a class="card" href="./demos/restaurant-leads/">
+        <span class="tag">Week 3</span>
+        <h2>Restaurant Lead Pipeline</h2>
+        <p>Generate and preview Pakistan restaurant leads with cuisine, ratings, and export-ready sample data.</p>
+        <div class="cta">Open live demo →</div>
+      </a>
+      <a class="card" href="./demos/name-recommender/">
+        <span class="tag">Week 4</span>
+        <h2>Business Name Recommender</h2>
+        <p>Type keywords and generate brandable SME consultancy names with scores — right in the browser.</p>
+        <div class="cta">Open live demo →</div>
+      </a>
+    </div>
+    <p class="section-title">Also in the repo</p>
+    <div class="grid">
+      <a class="card" href="https://github.com/hammad-ml-dev/ai-internship-portfolio/tree/main/01-research-tools">
+        <span class="tag">Week 1</span>
+        <h2>Research Tools</h2>
+        <p>Nova, Thunderbit AI, and research notes used before building the datasets and pipelines.</p>
+        <div class="cta">Browse on GitHub →</div>
+      </a>
+      <a class="card" href="https://github.com/hammad-ml-dev/ai-internship-portfolio/tree/main/02-business-datasets">
+        <span class="tag">Week 2</span>
+        <h2>Business Datasets</h2>
+        <p>30 Excel datasets from ypages.pk across Pakistan SME categories.</p>
+        <div class="cta">Browse datasets →</div>
+      </a>
+    </div>
+    <p class="section-title">Suggested learning path</p>
+    <div class="path">
+      Try the tools in this order:
+      <ol>
+        <li>Open the <a href="./demos/restaurant-leads/">Restaurant Lead</a> demo and export a CSV</li>
+        <li>Generate names in the <a href="./demos/name-recommender/">Name Recommender</a> demo</li>
+        <li>Read the full source on <a href="https://github.com/hammad-ml-dev/ai-internship-portfolio">GitHub</a> and run Week 3/4 locally</li>
+      </ol>
+    </div>
+    <footer>
+      Source code:
+      <a href="https://github.com/hammad-ml-dev/ai-internship-portfolio">github.com/hammad-ml-dev/ai-internship-portfolio</a>
+    </footer>
+  </div>
+</body>
+</html>

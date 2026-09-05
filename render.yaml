@@ -1,0 +1,21 @@
+# Render Blueprint — two public demo services from this monorepo
+services:
+  - type: web
+    name: restaurant-lead-pipeline-demo
+    runtime: docker
+    rootDir: 03-restaurant-lead-pipeline
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 10000
+
+  - type: web
+    name: business-name-recommender-demo
+    runtime: docker
+    rootDir: 04-business-name-recommender
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 10000

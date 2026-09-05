@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>AI Business Name Recommender</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/static/styles.css" />
+	<script defer src="/static/app.js"></script>
+</head>
+<body>
+	<div class="bg-glow"></div>
+	<header class="header">
+		<h1 class="title glow">AI Business Name Recommender</h1>
+		<p class="subtitle">Generate brandable, professional names for SME consultancy services</p>
+	</header>
+
+	<main class="container card">
+		<section class="hero">
+			<div class="hero-glow"></div>
+			<h2>Welcome to your naming copilot</h2>
+			<p>Enter a few keywords and let the AI craft short, memorable, and professional names. Optionally, check domain availability too.</p>
+			<ol class="howto">
+				<li>Type relevant keywords (e.g., growth, trust, advisory)</li>
+				<li>Pick how many ideas to generate and length bounds</li>
+				<li>Toggle domain checks and select TLDs if needed</li>
+				<li>Click Generate and shortlist your favorites</li>
+			</ol>
+		</section>
+
+		<section class="controls">
+			<label>Keywords (comma-separated)</label>
+			<input id="keywords" type="text" placeholder="growth, trust, advisory, guardian, launch" />
+
+			<div class="grid">
+				<div>
+					<label>Count</label>
+					<input id="count" type="number" min="10" max="1000" value="120" />
+				</div>
+				<div>
+					<label>Top</label>
+					<input id="top" type="number" min="1" max="100" value="15" />
+				</div>
+				<div>
+					<label>Min Length</label>
+					<input id="minLen" type="number" min="3" max="20" value="5" />
+				</div>
+				<div>
+					<label>Max Length</label>
+					<input id="maxLen" type="number" min="5" max="24" value="12" />
+				</div>
+			</div>
+
+			<label>TLDs</label>
+			<div class="tlds">
+				<label><input type="checkbox" value=".com" checked /> .com</label>
+				<label><input type="checkbox" value=".co" /> .co</label>
+				<label><input type="checkbox" value=".io" /> .io</label>
+			</div>
+
+			<label>Optional dataset CSV (local path on server)</label>
+			<input id="datasetCsv" type="text" placeholder="C:/data/business_names.csv" />
+			<div class="upload">
+				<input id="datasetFile" type="file" accept=".csv" />
+				<button id="uploadBtn" class="btn-secondary">Upload CSV</button>
+			</div>
+
+			<label class="checkbox">
+				<input id="checkDomains" type="checkbox" /> Check domain availability
+			</label>
+
+			<label class="checkbox">
+				<input id="useLlm" type="checkbox" /> Use LLM boost (OpenAI)
+			</label>
+
+			<button id="generate" class="btn-primary">Generate</button>
+		</section>
+
+		<section>
+			<div id="loading" class="loading hidden">
+				<div class="spinner"></div>
+				<p>Generating brilliant names…</p>
+			</div>
+
+			<div id="results" class="results"></div>
+			<div class="actions">
+				<button id="downloadCsv" class="btn-secondary">Download CSV</button>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">Created by Hammad Durrani</footer>
+</body>
+</html>
+
+

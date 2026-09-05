@@ -1,0 +1,19 @@
+# Seed examples to bias style (do not copy exact strings)
+launchledger
+growthguard
+trustgate
+advisoria
+compliq
+veriscope
+fortibase
+primepath
+atlasguard
+harborwise
+beacontrust
+clarion
+ascendia
+nexoria
+ledgerly
+regulus
+vectora
+

@@ -1,0 +1,21 @@
+# Banned/profane/overly-generic fragments (lowercase)
+test
+demo
+tmp
+foo
+bar
+corp
+company
+consulting
+consultancy
+solution
+solutions
+service
+services
+global
+intl
+international
+xxx
+nsfw
+badword
+

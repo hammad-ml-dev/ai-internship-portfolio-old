@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Secrets & local env
+.env
+.env.*
+!.env.example
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Runtime / generated
+logs/
+temp/
+test_output/
+output/
+web_output/
+*.log
+*.db
+.pytest_cache/
+.mypy_cache/
+
+# Archives
+*.zip
+*.rar
+*.7z
